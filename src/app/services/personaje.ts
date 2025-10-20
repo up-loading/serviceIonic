@@ -355,5 +355,24 @@ export class PersonajeService {
     poderPrincipal: "Brazos tentáculos mecánicos, genio científico",
     primeraAparicion: 1963,
 },
+
 ];
+  // Obtener todos los personajes
+  // ✅ Obtener todos los personajes
+  getTodosLosPersonajes(): Personaje[] {
+    return this.personajesMarvel;
+  }
+
+  // ✅ Obtener personajes en un rango [inicio, fin)
+  getPersonajesPorRango(inicio: number, fin: number): Personaje[] {
+    return this.personajesMarvel.slice(inicio, fin);
+  }
+
+  // ✅ Obtener un personaje por índice
+  getPersonajePorIndice(indice: number): Personaje | undefined {
+    return this.personajesMarvel[indice];
+  }
 }
+
+
+
